@@ -1,0 +1,61 @@
+// 1
+var num = 12;
+for (var fact = 1, i = 1; i < num; i++) {
+    fact *= (i+1);
+    console.log(fact);
+}
+
+// 2
+function laugh(num){
+    var str = '';
+    for (var i = 0; i < num; i++) {
+        str += "ha";
+    }
+    str += "!";
+    return str;
+}
+console.log(laugh(3));
+
+// 3 *
+num = 2;
+function emotions(text, num, func) {
+    console.log("I am "+text+", "+func(num));
+}
+emotions("happy", num, function(num) {
+    var str = '';
+    for (var i = 0; i < num; i++) {
+        str += "ha";
+    }
+    str += "!";
+    return str;
+});
+
+// 4
+for (var i = 0; i < numbers.length; i++) {
+    for (var j = 0; j < numbers[i].length; j++) {
+        if (numbers[i][j] % 2 == 0) {
+            numbers[i][j] = "even";
+        } else {
+            numbers[i][j] = "odd";
+        }
+    }
+}
+
+// 5 *
+var facebookProfile = {
+    name: "Thessa",
+    friends: 1,
+    messages: ["Hello", "world"],
+    postMessage: function(msg) {
+        facebookProfile['messages'].push(msg);
+    },
+    deleteMessage: function(ndx) {
+        facebookProfile['messages'].splice(ndx, 1);
+    },
+    addFriend: function() {
+        ++this.friends;
+    },
+    removeFriend: function() {
+        --this.friends;
+    }
+}
